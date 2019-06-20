@@ -1,21 +1,23 @@
 import React, {Component} from 'react';
 import MapComponent from '../component/MapComponent';
-import {Dimensions} from "react-native";
+import {
+    Dimensions, 
+    BackHandler,    
+    ToastAndroid
+} from "react-native";
 
 const window = Dimensions.get('window');
 const { width, height }  = window;
 const ASPECT_RATIO = width / height;
 const LATITUDE_DELTA = 0.28; //0.0922;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
-
 class MapContainer extends Component {
 
     constructor(props) {
         super(props);
-
         this.state = {
             markers: props.navigation.getParam('data', false),
-            spinner: true,
+            exit: 0,            
             statusBarHeight: 0,
             latitude: 0,
             longitude: 0,
@@ -50,19 +52,43 @@ class MapContainer extends Component {
         });
     };
 
+    handleBackPress = () => {
+        if(this.state.exit == 1){
+            BackHandler.exitApp();
+        } else {
+            ToastAndroid.show("Pritisnite ponovo za izlaz", ToastAndroid.SHORT);
+            this.setState({
+                exit: 1
+            });
+            setTimeout( () => {
+                this.setState({
+                    exit: 0
+                }); 
+            }, 3 * 1000);
+        }
+        return true;
+      }
+
     async componentWillMount(): void {
         let initialRegion = await this.getCurrentPosition();
         this.setState({
             initialRegion: initialRegion,
             latitude: initialRegion.latitude,
-            longitude: initialRegion.longitude,
+            longitude: initialRegion.longitude,            
         });
-        setTimeout(()=>this.setState({statusBarHeight: 1}),500);
+        setTimeout(()=>this.setState({statusBarHeight: 1}), 1000);
     }
 
+    componentDidMount() {
+        this.backHandler = BackHandler.addEventListener('hardwareBackPress', this.handleBackPress);
+      }
+
+    componentWillUnmount() {
+        this.backHandler.remove()
+      }
+
     render() {
-        return <MapComponent
-            spinner={this.state.spinner}
+        return <MapComponent            
             region={this.state.initialRegion}
             markers={this.state.markers}
             latitude={this.state.latitude}

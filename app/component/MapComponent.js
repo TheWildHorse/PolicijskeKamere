@@ -1,8 +1,6 @@
 import React from 'react';
 import {
-    Container,
-    Button,
-    Icon,
+    Container,    
 } from 'native-base';
 import {
     StyleSheet,
@@ -47,7 +45,13 @@ const generateMarkers = (props) => {
                     />
             );
         });
-        return (
+        return content;
+    }
+};
+
+const MapComponent = props => {
+    return (
+        <Container style={styles(props).container}>            
             <MapView
                 ref={component => (_map = component)}
                 style={styles(props).map}
@@ -57,17 +61,9 @@ const generateMarkers = (props) => {
                 showsMyLocationButton={true}
                 onUserLocationChange={coordinates => animateToUserLocation(coordinates)}
                 onMapReady={animateToUserLocation(props)}
-            >
-            {content}
-            </MapView>
-        );
-    }
-};
-
-const MapComponent = props => {
-    return (
-        <Container style={styles(props).container}>
-            {generateMarkers(props)}            
+            >                
+                {generateMarkers(props)}
+            </MapView>            
         </Container>
     )
 };
@@ -82,8 +78,7 @@ const styles = (props) => StyleSheet.create({
     indicator: {
         color: "#ffffff",
     },
-    map: {
-        marginBottom: 100,
+    map: {        
         marginTop: props.statusBarHeight, // for displaying user location button
         ...StyleSheet.absoluteFillObject,
     },
