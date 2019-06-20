@@ -2,6 +2,12 @@ import React, {Component} from 'react';
 import MapComponent from '../component/MapComponent';
 import {Dimensions} from "react-native";
 
+const window = Dimensions.get('window');
+const { width, height }  = window;
+const LATITUDE_DELTA = 0.0922;
+const ASPECT_RATIO = width / height;
+const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
+
 class MapContainer extends Component {
 
     constructor(props) {
@@ -10,13 +16,14 @@ class MapContainer extends Component {
         this.state = {
             markers: props.navigation.getParam('data', false),
             spinner: true,
+            statusBarHeight: 0,
             latitude: 0,
             longitude: 0,
             initialRegion: {
                 latitude: 46.3057,
                 longitude: 16.3366,
-                latitudeDelta: 0.0922,
-                longitudeDelta: 0.0421,
+                latitudeDelta: LATITUDE_DELTA,
+                longitudeDelta: LONGITUDE_DELTA,
             },
         };
     }
@@ -24,11 +31,7 @@ class MapContainer extends Component {
     getCurrentPosition = async () => {
         let lat = 0,
             long = 0;
-        return new Promise((resolve) => {
-            const window = Dimensions.get('window');
-            const { width, height }  = window;
-            let LATITUDE_DELTA = 0.0922;
-            let LONGITUDE_DELTA = LATITUDE_DELTA + (width / height);
+        return new Promise((resolve) => {                
             navigator.geolocation.getCurrentPosition(
                 position => {
                     long = position.coords.longitude;
@@ -54,6 +57,7 @@ class MapContainer extends Component {
             latitude: initialRegion.latitude,
             longitude: initialRegion.longitude,
         });
+        setTimeout(()=>this.setState({statusBarHeight: 1}),500);
     }
 
     render() {
@@ -63,6 +67,7 @@ class MapContainer extends Component {
             markers={this.state.markers}
             latitude={this.state.latitude}
             longitude={this.state.longitude}
+            statusBarHeight={this.state.statusBarHeight}
         />;
     }
 }

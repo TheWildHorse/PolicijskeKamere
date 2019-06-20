@@ -6,26 +6,29 @@ import {
 } from 'native-base';
 import {
     StyleSheet,
-    Dimensions,
 } from 'react-native';
 import MapView from 'react-native-maps';
 
-let _map = '';
+let _map = MapView;
 
 const animateToUserLocation = (props) => {
+    
     if (props.latitude) {
+        let center = {
+            latitude: props.latitude,
+            longitude: props.longitude,
+        };        
         _map.animateCamera({
             heading: 0,
-            center: {latitude: props.latitude, longitude: props.longitude},
+            center: center,
             pitch: 0
         });
     }
 };
 
-const generateMarkers = (props) => {
-    console.log("broj markera: " + props.markers.length);
-
-    if (props.markers) {
+const generateMarkers = (props) => {    
+    if (props.markers.length > 0) {
+        console.log("broj markera: " + props.markers.length);
         let content = props.markers.map((data, i) => {
             let lat = parseFloat(data.lat);
             let lng = parseFloat(data.lng);
@@ -47,7 +50,7 @@ const generateMarkers = (props) => {
         return (
             <MapView
                 ref={component => (_map = component)}
-                style={styles.map}
+                style={styles(props).map}
                 initialRegion={props.region}
                 showsUserLocation={true}
                 followsUserLocation={true}
@@ -55,27 +58,21 @@ const generateMarkers = (props) => {
                 onUserLocationChange={coordinates => animateToUserLocation(coordinates)}
                 onMapReady={animateToUserLocation(props)}
             >
-                {content}
+            {content}
             </MapView>
-
         );
     }
 };
 
 const MapComponent = props => {
     return (
-        <Container style={styles.container}>
-            {generateMarkers(props)}
-            <Button style={styles.button} rounded iconLeft transparent
-                    onPress={animateToUserLocation(props)}
-            >
-                <Icon name='compass' />
-            </Button>
+        <Container style={styles(props).container}>
+            {generateMarkers(props)}            
         </Container>
     )
 };
 
-const styles = StyleSheet.create({
+const styles = (props) => StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: "center",
@@ -86,18 +83,9 @@ const styles = StyleSheet.create({
         color: "#ffffff",
     },
     map: {
-        marginTop: 100,
-        marginBottom: 0,
-        flex: 1,
-        justifyContent: 'center',
-        position: 'absolute',
-        height: Dimensions.get('window').height - 200,
-        width: Dimensions.get('window').width - 50,
+        marginBottom: 100,
+        marginTop: props.statusBarHeight, // for displaying user location button
+        ...StyleSheet.absoluteFillObject,
     },
-    button: {
-        position: "relative",
-        bottom: 0,
-        right: 0,
-    }
 });
 export default MapComponent
