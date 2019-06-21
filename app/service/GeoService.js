@@ -1,6 +1,6 @@
 import react from 'react';
 import {
-    Alert
+    ToastAndroid
 } from 'react-native';
 import {
     orderByDistance,
@@ -8,9 +8,21 @@ import {
     getDistance
 } from 'geolib';
 import BackgroundTimer from 'react-native-background-timer';
+var Sound = require('react-native-sound');
+Sound.setCategory('Playback');
+
+var notification = new Sound('notification.mp3', Sound.MAIN_BUNDLE, (error) => {
+    if (error) {
+      console.log('failed to load the sound', error);
+      return;
+    }
+    // loaded successfully
+    console.log('duration in seconds: ' + notification.getDuration() + 'number of channels: ' + notification.getNumberOfChannels());    
+  });
 
 let _cameras = null;
 let _navigatorWatch = null;
+
 class GeoService {
     constructor(props) {        
         _cameras = props.cameras;
@@ -47,8 +59,8 @@ class GeoService {
                     lng = position.coords.longitude;
                     lat = position.coords.latitude;
                     userLocation = {
-                        latitude: lat, //"46.29922"
-                        longitude: lng //"16.2"
+                        latitude: lat, //"46.29922" lat
+                        longitude: lng //"16.2" lng
                     }
                     this.findNearestCamera(userLocation, nearestCameras);
                 },
@@ -63,12 +75,18 @@ class GeoService {
         let cameraDistance = getDistance(userLocation, nearest);        
         if(cameraDistance < 500){
             let address = nearest.address;
-            if(address){
-                Alert.alert("Kamera za 500 metara! \nAdresa: " + nearest.address);
-            } else {
-                Alert.alert("Kamera za 500 metara!");
+            if(address !== 'null'){
+                ToastAndroid.show("Kamera za 500 metara!  \nAdresa: " + nearest.address, ToastAndroid.SHORT);                                           
+            } else {                
+                ToastAndroid.show("Kamera za 500 metara!", ToastAndroid.SHORT);
             }
-            console.log("kamera");
+            notification.play((success) => {
+                if (success) {
+                    console.log('successfully finished playing');
+                } else {
+                    console.log('playback failed due to audio decoding errors');
+                }
+            });            
         }        
     };
 
@@ -86,7 +104,7 @@ class GeoService {
     initializeTask = () => {
         BackgroundTimer.runBackgroundTimer(() => {     
             this.sortCameras();    
-        },15 * 60); //sort every 15min
+        },15 * 60 * 1000); //sort every 15min
     };
 
     stopTask = () => {
