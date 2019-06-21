@@ -52,7 +52,7 @@ class GeoService {
                 'timeout': 10000,
                 'maximumAge': 0,
                 'enableHighAccuracy': true,
-                'distanceFilter': 10,
+                'distanceFilter': 50,
             };
            _navigatorWatch = navigator.geolocation.watchPosition(
                 position => {
@@ -72,7 +72,7 @@ class GeoService {
 
     findNearestCamera = (userLocation,nearestCameras) => {            
         let nearest = findNearest(userLocation, nearestCameras);
-        let cameraDistance = getDistance(userLocation, nearest);        
+        let cameraDistance = getDistance(userLocation, nearest);
         if(cameraDistance < 500){
             let address = nearest.address;
             if(address !== 'null'){
@@ -98,13 +98,16 @@ class GeoService {
         if(orderedCamers.length > 50){
             nearestCameras = orderedCamers.slice(0, 50);
         }
-        this.startWatching(nearestCameras);
+        let cameraDistance = getDistance(userLocation, nearestCameras[0]);
+        if(cameraDistance < 7000){
+            this.startWatching(nearestCameras);
+        }
     };
 
     initializeTask = () => {
         BackgroundTimer.runBackgroundTimer(() => {     
             this.sortCameras();    
-        },15 * 60 * 1000); //sort every 15min
+        },2 * 60 * 1000);
     };
 
     stopTask = () => {
