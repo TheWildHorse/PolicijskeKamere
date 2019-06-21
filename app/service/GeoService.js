@@ -86,7 +86,7 @@ class GeoService {
     initializeTask = () => {
         BackgroundTimer.runBackgroundTimer(() => {     
             this.sortCameras();    
-        },15 * 60);        
+        },15 * 60); //sort every 15min
     };
 
     stopTask = () => {

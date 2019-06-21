@@ -72,7 +72,7 @@ class MapContainer extends Component {
                 this.setState({
                     exit: 0
                 }); 
-            }, 3 * 1000);
+            }, 3 * 1000); // wait for 3 seconds
         }
         return true;
       }

@@ -3,9 +3,7 @@ package com.policijskekamere;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-// import io.neson.react.notification.NotificationPackage;
 import com.ocetnik.timer.BackgroundTimerPackage;
-// import com.jamesisaac.rnbackgroundtask.BackgroundTaskPackage;
 import org.pgsqlite.SQLitePluginPackage;
 import com.airbnb.android.react.maps.MapsPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
@@ -29,7 +27,7 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-          new MainReactPackage(),            
+          new MainReactPackage(),               
             new BackgroundTimerPackage(),
             new MapsPackage(),
             new RNGestureHandlerPackage(),
