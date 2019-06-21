@@ -28,8 +28,8 @@ const generateMarkers = (props) => {
     if (props.markers.length > 0) {
         console.log("broj markera: " + props.markers.length);
         let content = props.markers.map((data, i) => {
-            let lat = parseFloat(data.lat);
-            let lng = parseFloat(data.lng);
+            let lat = parseFloat(data.latitude);
+            let lng = parseFloat(data.longitude);
             let speed = data.speed;
             let city = data.city;
             let address = data.address;

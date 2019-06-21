@@ -62,8 +62,8 @@ class InitialContainer extends Component {
                             let city = `${row.city}`;
                             let address = `${row.address}`;
                             let camera = {
-                                lat: lat,
-                                lng: lng,
+                                latitude: lat,
+                                longitude: lng,
                                 speed: speed,
                                 city: city,
                                 address: address,

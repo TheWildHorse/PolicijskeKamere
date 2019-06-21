@@ -5,12 +5,15 @@ import {
     BackHandler,    
     ToastAndroid
 } from "react-native";
+import GeoService from '../service/GeoService';
 
 const window = Dimensions.get('window');
 const { width, height }  = window;
 const ASPECT_RATIO = width / height;
 const LATITUDE_DELTA = 0.28; //0.0922;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
+
+let _geoService = null;
 
 class MapContainer extends Component {
 
@@ -29,6 +32,9 @@ class MapContainer extends Component {
                 longitudeDelta: LONGITUDE_DELTA,
             },
         };
+        _geoService = new GeoService({
+            cameras: this.state.markers,
+        });
     };
 
     getCurrentPosition = async () => {
@@ -55,6 +61,7 @@ class MapContainer extends Component {
 
     handleBackPress = () => {
         if(this.state.exit == 1){
+            _geolibService.stopTask();
             BackHandler.exitApp();
         } else {
             ToastAndroid.show("Pritisnite ponovo za izlaz", ToastAndroid.SHORT);
@@ -70,14 +77,15 @@ class MapContainer extends Component {
         return true;
       }
 
-    async componentWillMount(): void {
+    async componentWillMount() {
         let initialRegion = await this.getCurrentPosition();
         this.setState({
             initialRegion: initialRegion,
             latitude: initialRegion.latitude,
             longitude: initialRegion.longitude,            
         });
-        setTimeout(()=>this.setState({statusBarHeight: 1}), 1000);
+        setTimeout(()=>this.setState({statusBarHeight: 1}), 1000);        
+        _geoService.initializeTask();
     };
 
     componentDidMount() {
