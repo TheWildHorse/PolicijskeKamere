@@ -11,6 +11,7 @@ const { width, height }  = window;
 const ASPECT_RATIO = width / height;
 const LATITUDE_DELTA = 0.28; //0.0922;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
+
 class MapContainer extends Component {
 
     constructor(props) {
@@ -28,7 +29,7 @@ class MapContainer extends Component {
                 longitudeDelta: LONGITUDE_DELTA,
             },
         };
-    }
+    };
 
     getCurrentPosition = async () => {
         let lat = 0,
@@ -77,15 +78,15 @@ class MapContainer extends Component {
             longitude: initialRegion.longitude,            
         });
         setTimeout(()=>this.setState({statusBarHeight: 1}), 1000);
-    }
+    };
 
     componentDidMount() {
         this.backHandler = BackHandler.addEventListener('hardwareBackPress', this.handleBackPress);
-      }
+    };
 
     componentWillUnmount() {
         this.backHandler.remove()
-      }
+    };
 
     render() {
         return <MapComponent            
