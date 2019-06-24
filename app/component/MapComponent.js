@@ -1,6 +1,13 @@
 import React from 'react';
 import {
-    Container,    
+    Container,
+    Header,
+    Body,
+    Button,
+    Icon,
+    Title,
+    View,
+    Fab
 } from 'native-base';
 import {
     StyleSheet,
@@ -51,7 +58,15 @@ const generateMarkers = (props) => {
 
 const MapComponent = props => {
     return (
-        <Container style={styles(props).container}>            
+        <Container>
+            <Header>
+                <Body>
+                    <Title>{props.title}</Title>
+                </Body>          
+            </Header>
+            <View style={{ flex: 1 }}>
+                
+            </View>
             <MapView
                 ref={component => (_map = component)}
                 style={styles(props).map}
@@ -63,23 +78,30 @@ const MapComponent = props => {
                 onMapReady={animateToUserLocation(props)}
             >                
                 {generateMarkers(props)}
-            </MapView>            
+            </MapView>
+            <Fab
+                    active={props.fabStatus}
+                    direction="up"
+                    containerStyle={{ }}
+                    style={{ backgroundColor: '#5067FF' }}
+                    position="bottomRight"
+                    onPress={ () => props.handleFab() }
+                >
+                    <Icon name="settings" />                    
+                    <Button>
+                        <Icon name="help" />
+                    </Button>
+                    <Button>
+                        <Icon name="musical-note" />
+                    </Button>
+                </Fab>
         </Container>
     )
 };
 
 const styles = (props) => StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#56a1ff"
-    },
-    indicator: {
-        color: "#ffffff",
-    },
     map: {        
-        marginTop: props.statusBarHeight, // for displaying user location button
+        marginTop: props.menuTop, // for displaying user location button
         ...StyleSheet.absoluteFillObject,
     },
 });

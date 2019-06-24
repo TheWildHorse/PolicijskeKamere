@@ -21,10 +21,12 @@ class MapContainer extends Component {
         super(props);
         this.state = {
             markers: props.navigation.getParam('data', false),
-            exit: 0,            
-            statusBarHeight: 0,
+            exit: 0,     
+            title: 'Učitavanje lokacije',       
+            menuTop: 49,
             latitude: 0,
             longitude: 0,
+            fabStatus: false,
             initialRegion: {
                 latitude: 46.3057,
                 longitude: 16.3366,
@@ -77,14 +79,20 @@ class MapContainer extends Component {
         return true;
       }
 
+    handleFabPress = () => {
+        this.setState({
+            fabStatus: !this.state.fabStatus
+        });
+    };
+
     async componentWillMount() {
         let initialRegion = await this.getCurrentPosition();
         this.setState({
             initialRegion: initialRegion,
             latitude: initialRegion.latitude,
-            longitude: initialRegion.longitude,            
+            longitude: initialRegion.longitude,
         });
-        setTimeout(()=>this.setState({statusBarHeight: 1}), 1000);        
+        setTimeout(()=>this.setState({menuTop: 0}), 1000);        
         _geoService.initializeTask();
     };
 
@@ -102,7 +110,10 @@ class MapContainer extends Component {
             markers={this.state.markers}
             latitude={this.state.latitude}
             longitude={this.state.longitude}
-            statusBarHeight={this.state.statusBarHeight}
+            menuTop={this.state.menuTop}
+            title={this.state.title}
+            handleFab={this.handleFabPress.bind()}
+            fabStatus={this.state.fabStatus}
         />;
     }
 }
