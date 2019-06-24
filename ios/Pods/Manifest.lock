@@ -96,6 +96,7 @@ DEPENDENCIES:
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - Google-Maps-iOS-Utils
   - GoogleMaps
+  - React (from `../node_modules/react-native`)
   - react-native-google-maps (from `../node_modules/react-native-maps`)
   - react-native-maps (from `../node_modules/react-native-maps`)
   - React/Core (from `../node_modules/react-native`)
@@ -147,6 +148,6 @@ SPEC CHECKSUMS:
   react-native-maps: bb480348a3fe1e5a811fed1ba3387b329161c5cc
   yoga: 128daf064cacaede0c3bb27424b6b4c71052e6cd
 
-PODFILE CHECKSUM: 2cd15a48f365762289aaac0bad66b57c0d6235c3
+PODFILE CHECKSUM: dd6667e89db0cdfca8f68d7eea7c7cfd0461940b
 
 COCOAPODS: 1.5.3
