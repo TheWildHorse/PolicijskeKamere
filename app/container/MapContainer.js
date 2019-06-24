@@ -6,6 +6,7 @@ import {
     ToastAndroid
 } from "react-native";
 import GeoService from '../service/GeoService';
+import  HelpComponent from '../component/HelpComponent';
 
 const window = Dimensions.get('window');
 const { width, height }  = window;
@@ -27,6 +28,7 @@ class MapContainer extends Component {
             latitude: 0,
             longitude: 0,
             fabStatus: false,
+            showHelp: false,
             initialRegion: {
                 latitude: 46.3057,
                 longitude: 16.3366,
@@ -62,8 +64,8 @@ class MapContainer extends Component {
     };
 
     handleBackPress = () => {
-        if(this.state.exit == 1){
-            _geolibService.stopTask();
+        if(this.state.exit === 1){
+            _geoService.stopTask();
             BackHandler.exitApp();
         } else {
             ToastAndroid.show("Pritisnite ponovo za izlaz", ToastAndroid.SHORT);
@@ -85,6 +87,17 @@ class MapContainer extends Component {
         });
     };
 
+    handleFabHelpPress = () => {
+        this.setState({
+            showHelp: true
+        });
+    };
+
+    closeHelp = () => {
+        this.setState({
+            showHelp: false
+        });
+    };
     async componentWillMount() {
         let initialRegion = await this.getCurrentPosition();
         this.setState({
@@ -114,6 +127,9 @@ class MapContainer extends Component {
             title={this.state.title}
             handleFab={this.handleFabPress.bind()}
             fabStatus={this.state.fabStatus}
+            handleHelp={this.handleFabHelpPress.bind()}
+            showHelp={this.state.showHelp}
+            closeHelp={this.closeHelp.bind()}
         />;
     }
 }

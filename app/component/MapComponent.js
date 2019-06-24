@@ -13,6 +13,7 @@ import {
     StyleSheet,
 } from 'react-native';
 import MapView from 'react-native-maps';
+import HelpComponent from './HelpComponent';
 
 let _map = MapView;
 
@@ -88,13 +89,21 @@ const MapComponent = props => {
                     onPress={ () => props.handleFab() }
                 >
                     <Icon name="settings" />                    
-                    <Button>
+                    <Button
+                    onPress={ () => props.handleHelp()}
+                    >
                         <Icon name="help" />
                     </Button>
                     <Button>
                         <Icon name="musical-note" />
                     </Button>
                 </Fab>
+            {
+                props.showHelp &&
+                <HelpComponent
+                    props={props}
+                />
+            }
         </Container>
     )
 };
