@@ -9,8 +9,16 @@ import {
 } from 'geolib';
 import BackgroundTimer from 'react-native-background-timer';
 var Sound = require('react-native-sound');
-Sound.setCategory('Playback');
 
+/**
+ * Every 2 minutes sort cameras, and get 50 closest,
+ * if camera's inside 7km range, check every 100m meters, 
+ * when user's in 500m range, notifiy him with sound and toast notification for every 100m.
+ * Stop notifiying user if cameraDistance > oldCameraDistance.
+ */
+
+
+Sound.setCategory('Playback');
 var notification = new Sound('notification.mp3', Sound.MAIN_BUNDLE, (error) => {
     if (error) {
       console.log('failed to load the sound', error);
@@ -22,6 +30,7 @@ var notification = new Sound('notification.mp3', Sound.MAIN_BUNDLE, (error) => {
 
 let _cameras = null;
 let _navigatorWatch = null;
+let oldCameraDistance = 0;
 
 class GeoService {
     constructor(props) {        
@@ -52,7 +61,7 @@ class GeoService {
                 'timeout': 10000,
                 'maximumAge': 0,
                 'enableHighAccuracy': true,
-                'distanceFilter': 50,
+                'distanceFilter': 100,
             };
            _navigatorWatch = navigator.geolocation.watchPosition(
                 position => {
@@ -73,12 +82,12 @@ class GeoService {
     findNearestCamera = (userLocation,nearestCameras) => {            
         let nearest = findNearest(userLocation, nearestCameras);
         let cameraDistance = getDistance(userLocation, nearest);
-        if(cameraDistance < 500){
-            let address = nearest.address;
-            if(address !== 'null'){
-                ToastAndroid.show("Kamera za 500 metara!  \nAdresa: " + nearest.address, ToastAndroid.SHORT);                                           
+        if(cameraDistance < 500 && cameraDistance < oldCameraDistance){
+            let speed = nearest.speed;
+            if(speed !== 'null'){
+                ToastAndroid.show("Kamera za " + cameraDistance + " metara!  \nOgraničenje: " + speed, ToastAndroid.SHORT);                                           
             } else {                
-                ToastAndroid.show("Kamera za 500 metara!", ToastAndroid.SHORT);
+                ToastAndroid.show("Kamera za " + cameraDistance + " metara!", ToastAndroid.SHORT);
             }
             notification.play((success) => {
                 if (success) {
@@ -86,7 +95,8 @@ class GeoService {
                 } else {
                     console.log('playback failed due to audio decoding errors');
                 }
-            });            
+            });
+            oldCameraDistance = cameraDistance;
         }        
     };
 
