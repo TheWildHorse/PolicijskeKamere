@@ -6,7 +6,6 @@ import {
     ToastAndroid
 } from "react-native";
 import GeoService from '../service/GeoService';
-import  HelpComponent from '../component/HelpComponent';
 
 const window = Dimensions.get('window');
 const { width, height }  = window;
@@ -27,8 +26,11 @@ class MapContainer extends Component {
             menuTop: 49,
             latitude: 0,
             longitude: 0,
+            volume: 50,
+            selectedNotification: undefined,
             fabStatus: false,
             showHelp: false,
+            showOptions: false,
             initialRegion: {
                 latitude: 46.3057,
                 longitude: 16.3366,
@@ -89,15 +91,28 @@ class MapContainer extends Component {
 
     handleFabHelpPress = () => {
         this.setState({
-            showHelp: true
+            showHelp: !this.state.showHelp
         });
     };
 
-    closeHelp = () => {
+    handleFabOptionsPress = () => {
         this.setState({
-            showHelp: false
+            showOptions: !this.state.showOptions
         });
     };
+
+    handleVolume = (volume) => {
+        this.setState({
+            volume: volume/100
+        });
+    };
+
+    changeNotification = (notifcation) => {
+        this.setState({
+            notification: notifcation
+        });
+    };
+
     async componentWillMount() {
         let initialRegion = await this.getCurrentPosition();
         this.setState({
@@ -129,7 +144,12 @@ class MapContainer extends Component {
             fabStatus={this.state.fabStatus}
             handleHelp={this.handleFabHelpPress.bind()}
             showHelp={this.state.showHelp}
-            closeHelp={this.closeHelp.bind()}
+            handleOptions={this.handleFabOptionsPress.bind()}
+            showOptions={this.state.showOptions}
+            handleVolume={this.handleVolume.bind(this)}
+            changeNotification={this.changeNotification.bind(this)}
+            selectedNotification={this.state.notification}
+            volume={this.state.volume}
         />;
     }
 }

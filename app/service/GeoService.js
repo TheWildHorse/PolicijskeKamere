@@ -25,7 +25,7 @@ var notification = new Sound('notification.mp3', Sound.MAIN_BUNDLE, (error) => {
       return;
     }
     // loaded successfully
-    console.log('duration in seconds: ' + notification.getDuration() + 'number of channels: ' + notification.getNumberOfChannels());    
+    console.log('duration in seconds: ' + notification.getDuration() + ' number of channels: ' + notification.getNumberOfChannels());
   });
 
 let _cameras = null;

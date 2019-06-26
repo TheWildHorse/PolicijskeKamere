@@ -2,42 +2,55 @@ import React from "react";
 import {
     Overlay,
     Text,
+    Slider
 } from 'react-native-elements';
 import {
-    Container
+    Container,
 } from 'native-base';
 import {
     StyleSheet,
+    Picker
 } from 'react-native';
 
-const HelpComponent = props => {
+const OptionsComponent = props => {
     return (
         <Overlay
-        isVisible
-        onBackdropPress={ () => props.props.handleHelp()}
+            isVisible
+            onBackdropPress={() => props.props.handleOptions()}
         >
             <Container style={styles.container}>
-                <Text h3>Policijske Kamere</Text>
-                <Text style={styles.text}>
-                    Aplikacija je namijenjena upozoravanju vozača na blizinu statične
-                    kamere.
-                    Aplikacija može raditi u pozadini, te zvučnim signalom obaviještava korisnika da je kamera
-                    blizu, te prikazuje koliko je ograničenje na toj kameri.
-                </Text>
+                <Text h4>Glasnoća zvuka</Text>
+                <Slider
+                    value={props.props.volume}
+                    onValueChange={value => props.props.handleVolume(value)}
+                    minimumValue={0}
+                    maximumValue={100}
+                />
+                <Text h4>Obavijest</Text>
+                <Picker
+                    note
+                    mode="dropdown"
+                    selectedValue={props.props.selectedNotification}
+                    onValueChange={(notification) => props.props.changeNotification(notification)}
+                >
+                    <Picker.Item label="Zadano" value="notification"/>
+                    <Picker.Item label="Knife" value="notification1"/>
+                    <Picker.Item label="Dew" value="notification2"/>
+                </Picker>
             </Container>
         </Overlay>
     )
 };
 
 const styles = () => StyleSheet.create({
-    container:{
+    container: {
         flex: 1,
         justifyItems: 'center',
         alignText: 'center',
         padding: 5,
     },
-    text:{
+    text: {
         textAlign: 'center'
-    }
+    },
 });
-export default HelpComponent
+export default OptionsComponent

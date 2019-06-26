@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import MapView from 'react-native-maps';
 import HelpComponent from './HelpComponent';
+import OptionsComponent from './OptionsComponent';
 
 let _map = MapView;
 
@@ -94,13 +95,21 @@ const MapComponent = props => {
                     >
                         <Icon name="help" />
                     </Button>
-                    <Button>
+                    <Button
+                        onPress={ () => props.handleOptions()}
+                    >
                         <Icon name="musical-note" />
                     </Button>
                 </Fab>
             {
                 props.showHelp &&
                 <HelpComponent
+                    props={props}
+                />
+            }
+            {
+                props.showOptions &&
+                <OptionsComponent
                     props={props}
                 />
             }

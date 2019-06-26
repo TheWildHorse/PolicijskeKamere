@@ -14,7 +14,7 @@ const HelpComponent = props => {
     return (
         <Overlay
         isVisible
-        onBackdropPress={ () => props.props.closeHelp()}
+        onBackdropPress={ () => props.props.handleHelp()}
         >
             <Container style={styles.container}>
                 <Text h3>Policijske Kamere</Text>

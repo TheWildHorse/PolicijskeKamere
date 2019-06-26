@@ -29,6 +29,10 @@
 		1CE57FD62382459583D4BD00 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BB4A5DA9C8947F0AC78598C /* Ionicons.ttf */; };
 		27186962F1E54E10AC1B4171 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C67BEBC982749D497DD733E /* FontAwesome5_Regular.ttf */; };
 		28C0BD3571844077843CCEDF /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0945D803CDCA4624896E1BCF /* Roboto.ttf */; };
+		2A30A0AE22C347650039D353 /* notification3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A30A0AA22C347640039D353 /* notification3.mp3 */; };
+		2A30A0AF22C347650039D353 /* notification.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A30A0AB22C347650039D353 /* notification.mp3 */; };
+		2A30A0B022C347650039D353 /* notification1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A30A0AC22C347650039D353 /* notification1.mp3 */; };
+		2A30A0B122C347650039D353 /* notification2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A30A0AD22C347650039D353 /* notification2.mp3 */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -449,6 +453,10 @@
 		211C32475609492DBA35A330 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		2338B5D5E6207B3DBAD7F832 /* libPods-PolicijskeKamereTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PolicijskeKamereTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2349EC3A089F6E46721FF4EA /* Pods-PolicijskeKamere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolicijskeKamere.release.xcconfig"; path = "Pods/Target Support Files/Pods-PolicijskeKamere/Pods-PolicijskeKamere.release.xcconfig"; sourceTree = "<group>"; };
+		2A30A0AA22C347640039D353 /* notification3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = notification3.mp3; path = ../android/app/src/main/res/raw/notification3.mp3; sourceTree = "<group>"; };
+		2A30A0AB22C347650039D353 /* notification.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = notification.mp3; path = ../android/app/src/main/res/raw/notification.mp3; sourceTree = "<group>"; };
+		2A30A0AC22C347650039D353 /* notification1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = notification1.mp3; path = ../android/app/src/main/res/raw/notification1.mp3; sourceTree = "<group>"; };
+		2A30A0AD22C347650039D353 /* notification2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = notification2.mp3; path = ../android/app/src/main/res/raw/notification2.mp3; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* PolicijskeKamere-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PolicijskeKamere-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* PolicijskeKamere-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PolicijskeKamere-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -826,6 +834,10 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				2A30A0AB22C347650039D353 /* notification.mp3 */,
+				2A30A0AC22C347650039D353 /* notification1.mp3 */,
+				2A30A0AD22C347650039D353 /* notification2.mp3 */,
+				2A30A0AA22C347640039D353 /* notification3.mp3 */,
 				13B07FAE1A68108700A75B9A /* PolicijskeKamere */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* PolicijskeKamereTests */,
@@ -1452,17 +1464,21 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				2A30A0B022C347650039D353 /* notification1.mp3 in Resources */,
 				6784CC92C40D41C99688FE68 /* AntDesign.ttf in Resources */,
 				AC92C90017EA4F90AE9A4193 /* Entypo.ttf in Resources */,
 				D6A7BF85117E46239E14F84A /* EvilIcons.ttf in Resources */,
+				2A30A0AF22C347650039D353 /* notification.mp3 in Resources */,
 				85285A2397B24C3181C8D68B /* Feather.ttf in Resources */,
 				3D89B11D47A44C2686DE9DE3 /* FontAwesome.ttf in Resources */,
 				3FDF8312CC294E7CBAA4B8C4 /* FontAwesome5_Brands.ttf in Resources */,
 				27186962F1E54E10AC1B4171 /* FontAwesome5_Regular.ttf in Resources */,
 				05296D614EF545B599AD4941 /* FontAwesome5_Solid.ttf in Resources */,
+				2A30A0AE22C347650039D353 /* notification3.mp3 in Resources */,
 				583390C5980C482599ACB1F8 /* Foundation.ttf in Resources */,
 				1CE57FD62382459583D4BD00 /* Ionicons.ttf in Resources */,
 				C8E10C68165A4B68A278CABB /* MaterialCommunityIcons.ttf in Resources */,
+				2A30A0B122C347650039D353 /* notification2.mp3 in Resources */,
 				E547FE2E95E249D5A87BDDD6 /* MaterialIcons.ttf in Resources */,
 				0AE74D5B6B764E9FBE542E04 /* Octicons.ttf in Resources */,
 				A5B48AF1D4B04AE581A2D2F1 /* Roboto_medium.ttf in Resources */,
