@@ -48,6 +48,31 @@ class InitialContainer extends Component {
     getData = async () => {
         let promise = new Promise((resolve, reject) => {
             _database.transaction(tx => {
+                let notification = null;
+                let volume = 50;              
+                tx.executeSql(
+                    'CREATE TABLE IF NOT EXISTS "notification" ('+
+                        'id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,'+
+                        'volume FLOAT DEFAULT 0.5,' +
+                        'name TEXT);',
+                    [],
+                    (tx, results) => {                                
+                    }
+                );
+
+                tx.executeSql(
+                    'SELECT * FROM notification;',
+                    [],
+                    (tx, results) => {
+                        let len = results.rows.length;
+                        if(len > 0){
+                            let row = results.rows.item(--len);
+                            notification = `${row.name}`;
+                            volume = `${row.volume}` * 100;
+                        }                        
+                    }
+                );
+
                 tx.executeSql(
                     'SELECT * FROM cameras;',
                     [],
@@ -70,9 +95,9 @@ class InitialContainer extends Component {
                             };
                             cameras.push(camera);
                         }
-                        resolve(cameras);
+                        resolve({cameras, notification, volume});
                     }
-                );
+                );                
             });
         });
         promise.then((data) => {
@@ -80,7 +105,10 @@ class InitialContainer extends Component {
                 spinner: false,
             });
             this.props.navigation.navigate('Map', {
-                data: data
+                data: data.cameras,
+                notification: data.notification,
+                volume: data.volume,
+                database: _database
             })
         })
     };

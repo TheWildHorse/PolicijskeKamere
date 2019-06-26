@@ -19,12 +19,12 @@ import OptionsComponent from './OptionsComponent';
 let _map = MapView;
 
 const animateToUserLocation = (props) => {
-    
+
     if (props.latitude) {
         let center = {
             latitude: props.latitude,
             longitude: props.longitude,
-        };        
+        };
         _map.animateCamera({
             heading: 0,
             center: center,
@@ -33,7 +33,7 @@ const animateToUserLocation = (props) => {
     }
 };
 
-const generateMarkers = (props) => {    
+const generateMarkers = (props) => {
     if (props.markers.length > 0) {
         console.log("broj markera: " + props.markers.length);
         let content = props.markers.map((data, i) => {
@@ -43,15 +43,15 @@ const generateMarkers = (props) => {
             let city = data.city;
             let address = data.address;
             return (
-                    <MapView.Marker
-                        key={i}
-                        coordinate={{
-                            latitude: lat,
-                            longitude: lng
-                        }}
-                        title={city + "\n" + address}
-                        description={"Ograničenje: " + speed}
-                    />
+                <MapView.Marker
+                    key={i}
+                    coordinate={{
+                        latitude: lat,
+                        longitude: lng
+                    }}
+                    title={city + "\n" + address}
+                    description={"Ograničenje: " + speed}
+                />
             );
         });
         return content;
@@ -64,10 +64,10 @@ const MapComponent = props => {
             <Header>
                 <Body>
                     <Title>{props.title}</Title>
-                </Body>          
+                </Body>
             </Header>
             <View style={{ flex: 1 }}>
-                
+
             </View>
             <MapView
                 ref={component => (_map = component)}
@@ -78,29 +78,29 @@ const MapComponent = props => {
                 showsMyLocationButton={true}
                 onUserLocationChange={coordinates => animateToUserLocation(coordinates)}
                 onMapReady={animateToUserLocation(props)}
-            >                
+            >
                 {generateMarkers(props)}
             </MapView>
             <Fab
-                    active={props.fabStatus}
-                    direction="up"
-                    containerStyle={{ }}
-                    style={{ backgroundColor: '#5067FF' }}
-                    position="bottomRight"
-                    onPress={ () => props.handleFab() }
+                active={props.fabStatus}
+                direction="up"
+                containerStyle={{}}
+                style={{ backgroundColor: '#5067FF' }}
+                position="bottomRight"
+                onPress={() => props.handleFab()}
+            >
+                <Icon name="settings" />
+                <Button
+                    onPress={() => props.handleHelp()}
                 >
-                    <Icon name="settings" />                    
-                    <Button
-                    onPress={ () => props.handleHelp()}
-                    >
-                        <Icon name="help" />
-                    </Button>
-                    <Button
-                        onPress={ () => props.handleOptions()}
-                    >
-                        <Icon name="musical-note" />
-                    </Button>
-                </Fab>
+                    <Icon name="help" />
+                </Button>
+                <Button
+                    onPress={() => props.handleOptions()}
+                >
+                    <Icon name="musical-note" />
+                </Button>
+            </Fab>
             {
                 props.showHelp &&
                 <HelpComponent
@@ -118,7 +118,7 @@ const MapComponent = props => {
 };
 
 const styles = (props) => StyleSheet.create({
-    map: {        
+    map: {
         marginTop: props.menuTop, // for displaying user location button
         ...StyleSheet.absoluteFillObject,
     },

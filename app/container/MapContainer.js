@@ -12,6 +12,8 @@ const { width, height }  = window;
 const ASPECT_RATIO = width / height;
 const LATITUDE_DELTA = 0.28; //0.0922;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
+var Sound = require("react-native-sound");
+Sound.setCategory("Playback");
 
 let _geoService = null;
 
@@ -21,13 +23,14 @@ class MapContainer extends Component {
         super(props);
         this.state = {
             markers: props.navigation.getParam('data', false),
+            database: props.navigation.getParam('database', false),
+            selectedNotification: props.navigation.getParam('notification', false),
             exit: 0,     
             title: 'Učitavanje lokacije',       
             menuTop: 49,
             latitude: 0,
             longitude: 0,
-            volume: 50,
-            selectedNotification: undefined,
+            volume: props.navigation.getParam('volume', 50),
             fabStatus: false,
             showHelp: false,
             showOptions: false,
@@ -40,6 +43,7 @@ class MapContainer extends Component {
         };
         _geoService = new GeoService({
             cameras: this.state.markers,
+            selectedNotification: this.state.selectedNotification
         });
     };
 
@@ -103,16 +107,62 @@ class MapContainer extends Component {
 
     handleVolume = (volume) => {
         this.setState({
-            volume: volume/100
+            volume: volume
         });
+        this.updateDatabase(this.state.selectedNotification, volume);
     };
 
     changeNotification = (notifcation) => {
         this.setState({
-            notification: notifcation
+            selectedNotification: notifcation
+        });
+        this.updateDatabase(notifcation, this.state.volume);
+        this.playNotification(notifcation);
+    };
+
+    updateDatabase = (notifcation, volume) => {
+        let promise = new Promise((resolve, reject) => {
+            this.state.database.transaction(tx => {
+                let upit = 'INSERT INTO notification(name,volume) VALUES("' + notifcation + '",' + volume/100 + ');';
+                console.log(upit);
+                tx.executeSql(
+                    upit,
+                    [],
+                    (tx, results) => {
+                        console.log(results);                  
+                    }
+                );              
+            });
         });
     };
 
+    playNotification = (sound) => {
+		var notification = new Sound(
+			sound + ".mp3",
+			Sound.MAIN_BUNDLE,
+			error => {
+				if (error) {
+					console.log("failed to load the sound", error);
+					return;
+				}
+				// loaded successfully
+				console.log(
+					"duration in seconds: " +
+						notification.getDuration() +
+						" number of channels: " +
+						notification.getNumberOfChannels()
+				);
+			}
+		);
+		notification.play(success => {
+			if (success) {
+				console.log("successfully finished playing");
+			} else {
+				console.log("playback failed due to audio decoding errors");
+			}
+		});
+    };
+    
     async componentWillMount() {
         let initialRegion = await this.getCurrentPosition();
         this.setState({
@@ -148,7 +198,7 @@ class MapContainer extends Component {
             showOptions={this.state.showOptions}
             handleVolume={this.handleVolume.bind(this)}
             changeNotification={this.changeNotification.bind(this)}
-            selectedNotification={this.state.notification}
+            selectedNotification={this.state.selectedNotification}
             volume={this.state.volume}
         />;
     }
