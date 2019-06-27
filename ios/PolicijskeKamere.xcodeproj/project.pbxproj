@@ -46,20 +46,19 @@
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* PolicijskeKamereTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PolicijskeKamereTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
+		35E2C271775AD51A8094EFDF /* libPods-PolicijskeKamere-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89FD9980699DE3434DEE4BDF /* libPods-PolicijskeKamere-tvOSTests.a */; };
 		3C514311367B4CD6ACA7B956 /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A92C1F087DE4C8298C72847 /* rubicon-icon-font.ttf */; };
 		3D89B11D47A44C2686DE9DE3 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 89FBB016DB1F42F483A1592E /* FontAwesome.ttf */; };
 		3F74D8503A8F4B70A2DC1C08 /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 805ABA50CB744AADB2659AFB /* libRNSound.a */; };
 		3FDF8312CC294E7CBAA4B8C4 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E85CEFAE8A31418382283CD7 /* FontAwesome5_Brands.ttf */; };
-		47CBF3AFAF9202172869A0B9 /* libPods-PolicijskeKamere-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A49609BB81E857A83A467E /* libPods-PolicijskeKamere-tvOSTests.a */; };
 		4AF996AFD0FA4746A3B4DC58 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 916553BB86A84629B4BDB494 /* libRNVectorIcons.a */; };
 		55482331B8ED4F9598BA1410 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D97CBC3683F5430A8FFD5090 /* SimpleLineIcons.ttf */; };
-		57AE6FAFF57C975C7FF0558F /* libPods-PolicijskeKamere-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A6033A6AD0AC091A6F6611F /* libPods-PolicijskeKamere-tvOS.a */; };
+		56CE2E00836B5A68FCEEC1BB /* libPods-PolicijskeKamereTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC281B376ED1C245E52566AE /* libPods-PolicijskeKamereTests.a */; };
 		583390C5980C482599ACB1F8 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B84B947A2C66441FB4DA192C /* Foundation.ttf */; };
-		610F468BC9E931F2871606D2 /* libPods-PolicijskeKamereTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2338B5D5E6207B3DBAD7F832 /* libPods-PolicijskeKamereTests.a */; };
+		666BCD2AA21D9B6CD6E25C51 /* libPods-PolicijskeKamere-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E603D5F8E2BB26FC47A13151 /* libPods-PolicijskeKamere-tvOS.a */; };
 		6784CC92C40D41C99688FE68 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88CAA6C61A3947BBA134D880 /* AntDesign.ttf */; };
 		6E5796CF7CCD44FC8CAE94F1 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181D1C8C57D34820BF39B9E8 /* Zocial.ttf */; };
 		7494C010CE05486583B28790 /* libRNVectorIcons-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1163DA83D44A4D7C9E30D847 /* libRNVectorIcons-tvOS.a */; };
-		7A11E8550F69B3877C9DAC55 /* libPods-PolicijskeKamere.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A566598D23361D50F0E2EA4F /* libPods-PolicijskeKamere.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		85285A2397B24C3181C8D68B /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0C3668B86654ABF89CE3147 /* Feather.ttf */; };
 		861BEC6EE1CB4BBD81B5DE0C /* libRNGestureHandler-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BBF5ED76DAA47139AD594E3 /* libRNGestureHandler-tvOS.a */; };
@@ -72,6 +71,7 @@
 		C8E10C68165A4B68A278CABB /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 211C32475609492DBA35A330 /* MaterialCommunityIcons.ttf */; };
 		D6A7BF85117E46239E14F84A /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68532854725F4E32B868AE11 /* EvilIcons.ttf */; };
 		DCE270B1244D4FB6AA71E05A /* libRNBackgroundFetch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E81ED81805974A40B640C4C4 /* libRNBackgroundFetch.a */; };
+		E2207BDA1319226A8501DA2C /* libPods-PolicijskeKamere.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1DE55475D1F02AD85BDF9C /* libPods-PolicijskeKamere.a */; };
 		E547FE2E95E249D5A87BDDD6 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5C0293A043D4DF0A9C6908C /* MaterialIcons.ttf */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
@@ -433,8 +433,6 @@
 		00E356EE1AD99517003FC87E /* PolicijskeKamereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolicijskeKamereTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* PolicijskeKamereTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PolicijskeKamereTests.m; sourceTree = "<group>"; };
-		02C7394E73B207340DA68C09 /* Pods-PolicijskeKamereTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolicijskeKamereTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PolicijskeKamereTests/Pods-PolicijskeKamereTests.release.xcconfig"; sourceTree = "<group>"; };
-		08A49609BB81E857A83A467E /* libPods-PolicijskeKamere-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PolicijskeKamere-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0945D803CDCA4624896E1BCF /* Roboto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto.ttf; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
 		0C43260B7D8242CBADD02214 /* AirMaps.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AirMaps.xcodeproj; path = "../node_modules/react-native-maps/lib/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; };
 		1163DA83D44A4D7C9E30D847 /* libRNVectorIcons-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNVectorIcons-tvOS.a"; sourceTree = "<group>"; };
@@ -450,9 +448,8 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		181D1C8C57D34820BF39B9E8 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		193F03C4C05D4624BBF3220B /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		19A7FC77B8BD684038F185F5 /* Pods-PolicijskeKamereTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolicijskeKamereTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PolicijskeKamereTests/Pods-PolicijskeKamereTests.debug.xcconfig"; sourceTree = "<group>"; };
 		211C32475609492DBA35A330 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
-		2338B5D5E6207B3DBAD7F832 /* libPods-PolicijskeKamereTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PolicijskeKamereTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2349EC3A089F6E46721FF4EA /* Pods-PolicijskeKamere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolicijskeKamere.release.xcconfig"; path = "Pods/Target Support Files/Pods-PolicijskeKamere/Pods-PolicijskeKamere.release.xcconfig"; sourceTree = "<group>"; };
 		2A30A0AA22C347640039D353 /* notification3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = notification3.mp3; path = ../android/app/src/main/res/raw/notification3.mp3; sourceTree = "<group>"; };
 		2A30A0AB22C347650039D353 /* notification.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = notification.mp3; path = ../android/app/src/main/res/raw/notification.mp3; sourceTree = "<group>"; };
 		2A30A0AC22C347650039D353 /* notification1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = notification1.mp3; path = ../android/app/src/main/res/raw/notification1.mp3; sourceTree = "<group>"; };
@@ -461,46 +458,49 @@
 		2D02E4901E0B4A5D006451C7 /* PolicijskeKamere-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PolicijskeKamere-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		302F1815E4424D328305C87D /* libAirMaps.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAirMaps.a; sourceTree = "<group>"; };
-		3A6033A6AD0AC091A6F6611F /* libPods-PolicijskeKamere-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PolicijskeKamere-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A97D84884067E63B8F90126 /* Pods-PolicijskeKamere-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolicijskeKamere-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PolicijskeKamere-tvOS/Pods-PolicijskeKamere-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		3667348919B0BD858B2B5FB5 /* Pods-PolicijskeKamere-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolicijskeKamere-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PolicijskeKamere-tvOS/Pods-PolicijskeKamere-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		3C67BEBC982749D497DD733E /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		3D78AEC6EDA34BF1B3188522 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		475685C8AFC5477CBFD0E2C5 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
-		568E7D3C42C59569CB67DB7E /* Pods-PolicijskeKamere-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolicijskeKamere-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PolicijskeKamere-tvOSTests/Pods-PolicijskeKamere-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		5A92C1F087DE4C8298C72847 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; };
+		5B1DE55475D1F02AD85BDF9C /* libPods-PolicijskeKamere.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PolicijskeKamere.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB4A5DA9C8947F0AC78598C /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		5BBF5ED76DAA47139AD594E3 /* libRNGestureHandler-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNGestureHandler-tvOS.a"; sourceTree = "<group>"; };
 		5DF66C4444744ABCAD795C17 /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = "<group>"; };
 		5E15D7A0F6FA490E90648278 /* SQLite.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../node_modules/react-native-sqlite-storage/src/ios/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		63B909D7F3C51F05CFF79069 /* Pods-PolicijskeKamere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolicijskeKamere.release.xcconfig"; path = "Pods/Target Support Files/Pods-PolicijskeKamere/Pods-PolicijskeKamere.release.xcconfig"; sourceTree = "<group>"; };
 		63C78154CB8C4C55A5A02D53 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		66AE17BA3795A3A6704E8E69 /* Pods-PolicijskeKamereTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolicijskeKamereTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PolicijskeKamereTests/Pods-PolicijskeKamereTests.release.xcconfig"; sourceTree = "<group>"; };
 		68532854725F4E32B868AE11 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		7013A48A9684041FBA27242A /* Pods-PolicijskeKamere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolicijskeKamere.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PolicijskeKamere/Pods-PolicijskeKamere.debug.xcconfig"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		805ABA50CB744AADB2659AFB /* libRNSound.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSound.a; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		88569486B81EC8F900F157BF /* Pods-PolicijskeKamereTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolicijskeKamereTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PolicijskeKamereTests/Pods-PolicijskeKamereTests.debug.xcconfig"; sourceTree = "<group>"; };
 		88CAA6C61A3947BBA134D880 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/native-base/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		89FBB016DB1F42F483A1592E /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		89FD9980699DE3434DEE4BDF /* libPods-PolicijskeKamere-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PolicijskeKamere-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		916553BB86A84629B4BDB494 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
-		9F1419F24DE28DE9F7503F5D /* Pods-PolicijskeKamere-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolicijskeKamere-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PolicijskeKamere-tvOS/Pods-PolicijskeKamere-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		A566598D23361D50F0E2EA4F /* libPods-PolicijskeKamere.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PolicijskeKamere.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A59DEE8929371978DCFF6F3B /* Pods-PolicijskeKamere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolicijskeKamere.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PolicijskeKamere/Pods-PolicijskeKamere.debug.xcconfig"; sourceTree = "<group>"; };
+		9EAD9D108F6C97136DB906C5 /* Pods-PolicijskeKamere-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolicijskeKamere-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PolicijskeKamere-tvOSTests/Pods-PolicijskeKamere-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		AB4C9C97534A4E398ECBFF02 /* Roboto_medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto_medium.ttf; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		B5C0293A043D4DF0A9C6908C /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		B84B947A2C66441FB4DA192C /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
-		BCE6C178B0793BB1663DC8F2 /* Pods-PolicijskeKamere-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolicijskeKamere-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PolicijskeKamere-tvOSTests/Pods-PolicijskeKamere-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0C3668B86654ABF89CE3147 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/native-base/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		CA8E0C045A9CD4886C726F7E /* Pods-PolicijskeKamere-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolicijskeKamere-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PolicijskeKamere-tvOSTests/Pods-PolicijskeKamere-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD33214ADD5745A5BA6C6632 /* RNBackgroundFetch.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNBackgroundFetch.xcodeproj; path = "../node_modules/react-native-background-fetch/ios/RNBackgroundFetch.xcodeproj"; sourceTree = "<group>"; };
+		CD545406D1FCE9D92514C4B1 /* Pods-PolicijskeKamere-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolicijskeKamere-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PolicijskeKamere-tvOS/Pods-PolicijskeKamere-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		D1CB28D664DF4F10AB68C23F /* RNSound.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSound.xcodeproj; path = "../node_modules/react-native-sound/RNSound.xcodeproj"; sourceTree = "<group>"; };
 		D97CBC3683F5430A8FFD5090 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		E36E430CC7D24C4190D4A810 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
+		E603D5F8E2BB26FC47A13151 /* libPods-PolicijskeKamere-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PolicijskeKamere-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81ED81805974A40B640C4C4 /* libRNBackgroundFetch.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNBackgroundFetch.a; sourceTree = "<group>"; };
 		E84D818156BD4C7DB560845B /* RNBackgroundTimer.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNBackgroundTimer.xcodeproj; path = "../node_modules/react-native-background-timer/ios/RNBackgroundTimer.xcodeproj"; sourceTree = "<group>"; };
 		E85CEFAE8A31418382283CD7 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		EAB8DA92E1B0477AAA6A5414 /* libSQLite.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libSQLite.a; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		FC281B376ED1C245E52566AE /* libPods-PolicijskeKamereTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PolicijskeKamereTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3EEBC3FCA14551BD523582 /* libRNBackgroundTimer.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNBackgroundTimer.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -510,7 +510,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
-				610F468BC9E931F2871606D2 /* libPods-PolicijskeKamereTests.a in Frameworks */,
+				56CE2E00836B5A68FCEEC1BB /* libPods-PolicijskeKamereTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,7 +538,7 @@
 				DCE270B1244D4FB6AA71E05A /* libRNBackgroundFetch.a in Frameworks */,
 				16C3749AAF9A460DB339FE35 /* libRNBackgroundTimer.a in Frameworks */,
 				3F74D8503A8F4B70A2DC1C08 /* libRNSound.a in Frameworks */,
-				7A11E8550F69B3877C9DAC55 /* libPods-PolicijskeKamere.a in Frameworks */,
+				E2207BDA1319226A8501DA2C /* libPods-PolicijskeKamere.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,7 +557,7 @@
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
 				7494C010CE05486583B28790 /* libRNVectorIcons-tvOS.a in Frameworks */,
 				861BEC6EE1CB4BBD81B5DE0C /* libRNGestureHandler-tvOS.a in Frameworks */,
-				57AE6FAFF57C975C7FF0558F /* libPods-PolicijskeKamere-tvOS.a in Frameworks */,
+				666BCD2AA21D9B6CD6E25C51 /* libPods-PolicijskeKamere-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,7 +566,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */,
-				47CBF3AFAF9202172869A0B9 /* libPods-PolicijskeKamere-tvOSTests.a in Frameworks */,
+				35E2C271775AD51A8094EFDF /* libPods-PolicijskeKamere-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,6 +630,21 @@
 				00E356F11AD99517003FC87E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		049BE0FD516DC6FB9C2D3448 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7013A48A9684041FBA27242A /* Pods-PolicijskeKamere.debug.xcconfig */,
+				63B909D7F3C51F05CFF79069 /* Pods-PolicijskeKamere.release.xcconfig */,
+				3667348919B0BD858B2B5FB5 /* Pods-PolicijskeKamere-tvOS.debug.xcconfig */,
+				CD545406D1FCE9D92514C4B1 /* Pods-PolicijskeKamere-tvOS.release.xcconfig */,
+				CA8E0C045A9CD4886C726F7E /* Pods-PolicijskeKamere-tvOSTests.debug.xcconfig */,
+				9EAD9D108F6C97136DB906C5 /* Pods-PolicijskeKamere-tvOSTests.release.xcconfig */,
+				19A7FC77B8BD684038F185F5 /* Pods-PolicijskeKamereTests.debug.xcconfig */,
+				66AE17BA3795A3A6704E8E69 /* Pods-PolicijskeKamereTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		139105B71AF99BAD00B5F7CC /* Products */ = {
@@ -770,10 +785,10 @@
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
-				A566598D23361D50F0E2EA4F /* libPods-PolicijskeKamere.a */,
-				3A6033A6AD0AC091A6F6611F /* libPods-PolicijskeKamere-tvOS.a */,
-				08A49609BB81E857A83A467E /* libPods-PolicijskeKamere-tvOSTests.a */,
-				2338B5D5E6207B3DBAD7F832 /* libPods-PolicijskeKamereTests.a */,
+				5B1DE55475D1F02AD85BDF9C /* libPods-PolicijskeKamere.a */,
+				E603D5F8E2BB26FC47A13151 /* libPods-PolicijskeKamere-tvOS.a */,
+				89FD9980699DE3434DEE4BDF /* libPods-PolicijskeKamere-tvOSTests.a */,
+				FC281B376ED1C245E52566AE /* libPods-PolicijskeKamereTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -844,8 +859,8 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				946B0C21D1AF4BBBA0C7A69E /* Resources */,
-				AC84EC7D730BF618F4C0AFDE /* Pods */,
 				2A2405A722C0CF8B003FE0E8 /* Recovered References */,
+				049BE0FD516DC6FB9C2D3448 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -888,21 +903,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		AC84EC7D730BF618F4C0AFDE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A59DEE8929371978DCFF6F3B /* Pods-PolicijskeKamere.debug.xcconfig */,
-				2349EC3A089F6E46721FF4EA /* Pods-PolicijskeKamere.release.xcconfig */,
-				3A97D84884067E63B8F90126 /* Pods-PolicijskeKamere-tvOS.debug.xcconfig */,
-				9F1419F24DE28DE9F7503F5D /* Pods-PolicijskeKamere-tvOS.release.xcconfig */,
-				BCE6C178B0793BB1663DC8F2 /* Pods-PolicijskeKamere-tvOSTests.debug.xcconfig */,
-				568E7D3C42C59569CB67DB7E /* Pods-PolicijskeKamere-tvOSTests.release.xcconfig */,
-				88569486B81EC8F900F157BF /* Pods-PolicijskeKamereTests.debug.xcconfig */,
-				02C7394E73B207340DA68C09 /* Pods-PolicijskeKamereTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		ADBDB9201DFEBF0600ED6528 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -919,7 +919,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "PolicijskeKamereTests" */;
 			buildPhases = (
-				1FC9D9B9880B17086E38DD8D /* [CP] Check Pods Manifest.lock */,
+				2EF4C838BCAE0A627C58EFAA /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
@@ -938,12 +938,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "PolicijskeKamere" */;
 			buildPhases = (
-				25BFA5B240195341617DF9A4 /* [CP] Check Pods Manifest.lock */,
+				908E3D677A48A7A0A0836D3E /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				AD5B49890E33EA1ACADE6D7A /* [CP] Copy Pods Resources */,
+				D7709970917F2C6C7DFAA6DE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -958,7 +958,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "PolicijskeKamere-tvOS" */;
 			buildPhases = (
-				5FB57BC763BCE24A56301729 /* [CP] Check Pods Manifest.lock */,
+				6EF4DD2F2D1F320B85B51BF6 /* [CP] Check Pods Manifest.lock */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
 				2D02E4791E0B4A5D006451C7 /* Resources */,
@@ -977,7 +977,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "PolicijskeKamere-tvOSTests" */;
 			buildPhases = (
-				D2D01B542A651731205F35BF /* [CP] Check Pods Manifest.lock */,
+				4E4F0BC551C1FC9F2CE05574 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -1521,7 +1521,21 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		1FC9D9B9880B17086E38DD8D /* [CP] Check Pods Manifest.lock */ = {
+		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native Code And Images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		2EF4C838BCAE0A627C58EFAA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1543,7 +1557,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		25BFA5B240195341617DF9A4 /* [CP] Check Pods Manifest.lock */ = {
+		4E4F0BC551C1FC9F2CE05574 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1558,28 +1572,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PolicijskeKamere-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-PolicijskeKamere-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Bundle React Native Code And Images";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		5FB57BC763BCE24A56301729 /* [CP] Check Pods Manifest.lock */ = {
+		6EF4DD2F2D1F320B85B51BF6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1601,7 +1601,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AD5B49890E33EA1ACADE6D7A /* [CP] Copy Pods Resources */ = {
+		908E3D677A48A7A0A0836D3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PolicijskeKamere-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7709970917F2C6C7DFAA6DE /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1621,28 +1643,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PolicijskeKamere/Pods-PolicijskeKamere-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D2D01B542A651731205F35BF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PolicijskeKamere-tvOSTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1712,7 +1712,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88569486B81EC8F900F157BF /* Pods-PolicijskeKamereTests.debug.xcconfig */;
+			baseConfigurationReference = 19A7FC77B8BD684038F185F5 /* Pods-PolicijskeKamereTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1748,7 +1748,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02C7394E73B207340DA68C09 /* Pods-PolicijskeKamereTests.release.xcconfig */;
+			baseConfigurationReference = 66AE17BA3795A3A6704E8E69 /* Pods-PolicijskeKamereTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -1781,7 +1781,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A59DEE8929371978DCFF6F3B /* Pods-PolicijskeKamere.debug.xcconfig */;
+			baseConfigurationReference = 7013A48A9684041FBA27242A /* Pods-PolicijskeKamere.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1817,7 +1817,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2349EC3A089F6E46721FF4EA /* Pods-PolicijskeKamere.release.xcconfig */;
+			baseConfigurationReference = 63B909D7F3C51F05CFF79069 /* Pods-PolicijskeKamere.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1852,7 +1852,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A97D84884067E63B8F90126 /* Pods-PolicijskeKamere-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 3667348919B0BD858B2B5FB5 /* Pods-PolicijskeKamere-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1893,7 +1893,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F1419F24DE28DE9F7503F5D /* Pods-PolicijskeKamere-tvOS.release.xcconfig */;
+			baseConfigurationReference = CD545406D1FCE9D92514C4B1 /* Pods-PolicijskeKamere-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1934,7 +1934,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCE6C178B0793BB1663DC8F2 /* Pods-PolicijskeKamere-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = CA8E0C045A9CD4886C726F7E /* Pods-PolicijskeKamere-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1974,7 +1974,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 568E7D3C42C59569CB67DB7E /* Pods-PolicijskeKamere-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 9EAD9D108F6C97136DB906C5 /* Pods-PolicijskeKamere-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
