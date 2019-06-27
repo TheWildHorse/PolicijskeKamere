@@ -48,7 +48,7 @@ class InitialContainer extends Component {
     getData = async () => {
         let promise = new Promise((resolve, reject) => {
             _database.transaction(tx => {
-                let notification = null;
+                let notification = "notification";
                 let volume = 50;              
                 tx.executeSql(
                     'CREATE TABLE IF NOT EXISTS "notification" ('+
