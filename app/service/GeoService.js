@@ -34,8 +34,8 @@ class GeoService {
 					lat = position.coords.latitude;
 					let speed = position.coords.speed;
 					let userLocation = {
-						latitude: "46.29922", //"46.29922" lat
-						longitude: "16.2" //"16.2" lng
+						latitude: lat, //"46.29922" lat
+						longitude: lng //"16.2" lng
 					};
 					resolve({ userLocation, speed });
 				},
@@ -58,8 +58,8 @@ class GeoService {
 					lng = position.coords.longitude;
 					lat = position.coords.latitude;
 					userLocation = {
-						latitude: "46.29922", //"46.29922" lat
-						longitude: "16.2" //"16.2" lng
+						latitude: lat, //"46.29922" lat
+						longitude: lng //"16.2" lng
 					};
 
 					this.findNearestCamera(userLocation, nearestCameras);
@@ -122,7 +122,8 @@ class GeoService {
 	sortCameras = async () => {
 		navigator.geolocation.clearWatch(_navigatorWatch);
 		let positionData = await this.getCurrentPosition();
-		if (positionData.speed < 30) {
+		alert("speed: " . positionData.speed);
+		if (positionData.speed > 30) {
 			// check
 			let orderedCamers = orderByDistance(
 				positionData.userLocation,
