@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import MapComponent from "../component/MapComponent";
 import { Dimensions, BackHandler, ToastAndroid } from "react-native";
 import GeoService from "../service/GeoService";
+import Geolocation from '@react-native-community/geolocation';
 
 const window = Dimensions.get("window");
 const { width, height } = window;
@@ -50,7 +51,7 @@ class MapContainer extends Component {
 		let lat = 0,
 			long = 0;
 		return new Promise(resolve => {
-			navigator.geolocation.getCurrentPosition(
+			Geolocation.getCurrentPosition(
 				position => {
 					long = position.coords.longitude;
 					lat = position.coords.latitude;

@@ -2,6 +2,7 @@ import react from "react";
 import { ToastAndroid } from "react-native";
 import { orderByDistance, findNearest, getDistance } from "geolib";
 import BackgroundTimer from "react-native-background-timer";
+import Geolocation from '@react-native-community/geolocation';
 var Sound = require("react-native-sound");
 
 /**
@@ -28,7 +29,7 @@ class GeoService {
 
 	getCurrentPosition = async () => {
 		return new Promise(resolve => {
-			navigator.geolocation.getCurrentPosition(
+			Geolocation.watchPosition(
 				position => {
 					long = position.coords.longitude;
 					lat = position.coords.latitude;
@@ -53,7 +54,7 @@ class GeoService {
 				enableHighAccuracy: true,
 				distanceFilter: 100
 			};
-			_navigatorWatch = navigator.geolocation.watchPosition(
+			_navigatorWatch = Geolocation.watchPosition(
 				position => {
 					lng = position.coords.longitude;
 					lat = position.coords.latitude;
@@ -73,7 +74,8 @@ class GeoService {
 	findNearestCamera = (userLocation, nearestCameras) => {
 		let nearest = findNearest(userLocation, nearestCameras);
 		let cameraDistance = getDistance(userLocation, nearest);
-		if (cameraDistance < 500 && cameraDistance < oldCameraDistance) {
+		let oldCameraDistance = 1000;
+		if (cameraDistance < 500 && (cameraDistance < oldCameraDistance) ) {
 			let speed = nearest.speed;
 			this.playNotification();
 			if (speed !== "null") {
@@ -120,9 +122,9 @@ class GeoService {
 	};
 
 	sortCameras = async () => {
-		navigator.geolocation.clearWatch(_navigatorWatch);
+		Geolocation.clearWatch(_navigatorWatch);
 		let positionData = await this.getCurrentPosition();
-		alert("speed: " . positionData.userLocation.speed);
+		alert("speed: " . positionData.speed);
 		if (positionData.speed > 30) {
 			// check
 			let orderedCamers = orderByDistance(
@@ -146,7 +148,7 @@ class GeoService {
 	initializeTask = () => {
 		BackgroundTimer.runBackgroundTimer(() => {
 			this.sortCameras();
-		}, 2 * 1000); //*60
+		}, 2 * 60 * 1000); //*60
 	};
 
 	stopTask = () => {
