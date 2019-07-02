@@ -14,7 +14,7 @@ const openCB = () => {
     console.log("Database OPENED");
 };
 
-const _database = openDatabase({name: 'cameras.db', createFromLocation: '~www/cameras.db',}, openCB, errorCB(this));
+const _database = openDatabase({name: 'cameras.db', createFromLocation: 1,}, openCB, errorCB(this));
 
 
 class InitialContainer extends Component {
