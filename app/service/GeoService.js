@@ -35,7 +35,7 @@ class GeoService {
 					let speed = position.coords.speed;
 					let userLocation = {
 						latitude: lat, //"46.29922" lat
-						longitude: lng //"16.2" lng
+						longitude: long //"16.2" long
 					};
 					resolve({ userLocation, speed });
 				},
@@ -122,7 +122,7 @@ class GeoService {
 	sortCameras = async () => {
 		navigator.geolocation.clearWatch(_navigatorWatch);
 		let positionData = await this.getCurrentPosition();
-		alert("speed: " . positionData.speed);
+		alert("speed: " . positionData.userLocation.speed);
 		if (positionData.speed > 30) {
 			// check
 			let orderedCamers = orderByDistance(
@@ -146,7 +146,7 @@ class GeoService {
 	initializeTask = () => {
 		BackgroundTimer.runBackgroundTimer(() => {
 			this.sortCameras();
-		}, 2 * 60 * 1000);
+		}, 2 * 1000); //*60
 	};
 
 	stopTask = () => {

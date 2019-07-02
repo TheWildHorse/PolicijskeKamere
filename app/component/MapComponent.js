@@ -77,7 +77,7 @@ const MapComponent = props => {
                 followsUserLocation={true}
                 showsMyLocationButton={true}
                 onUserLocationChange={coordinates => animateToUserLocation(coordinates)}
-                onMapReady={animateToUserLocation(props)}
+                onMapReady={() => animateToUserLocation(props)}
             >
                 {generateMarkers(props)}
             </MapView>

@@ -33,7 +33,6 @@
 		2A08D6A422CB4C4C000E50B5 /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2405D922C0CF8C003FE0E8 /* libRNSound.a */; };
 		2A08D6A522CB4C69000E50B5 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2405E422C0CF8C003FE0E8 /* libRNGestureHandler.a */; };
 		2A08D6A822CB4D50000E50B5 /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2405DE22C0CF8C003FE0E8 /* libAirMaps.a */; };
-		2A08D70622CB52BF000E50B5 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A08D70522CB52BF000E50B5 /* GoogleMaps.framework */; };
 		2A08D70822CB5403000E50B5 /* AirGoogleMaps in Resources */ = {isa = PBXBuildFile; fileRef = 2A08D70722CB5403000E50B5 /* AirGoogleMaps */; };
 		2A08D70A22CB5421000E50B5 /* AirMaps in Resources */ = {isa = PBXBuildFile; fileRef = 2A08D70922CB5420000E50B5 /* AirMaps */; };
 		2A30A0AF22C347650039D353 /* notification.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A30A0AB22C347650039D353 /* notification.mp3 */; };
@@ -56,7 +55,6 @@
 		3C514311367B4CD6ACA7B956 /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A92C1F087DE4C8298C72847 /* rubicon-icon-font.ttf */; };
 		3D89B11D47A44C2686DE9DE3 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 89FBB016DB1F42F483A1592E /* FontAwesome.ttf */; };
 		3FDF8312CC294E7CBAA4B8C4 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E85CEFAE8A31418382283CD7 /* FontAwesome5_Brands.ttf */; };
-		442049F11513452BAC478B5E /* libRNFS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C710B8BA5E24455C972E4254 /* libRNFS.a */; };
 		55482331B8ED4F9598BA1410 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D97CBC3683F5430A8FFD5090 /* SimpleLineIcons.ttf */; };
 		583390C5980C482599ACB1F8 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B84B947A2C66441FB4DA192C /* Foundation.ttf */; };
 		6784CC92C40D41C99688FE68 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88CAA6C61A3947BBA134D880 /* AntDesign.ttf */; };
@@ -450,7 +448,6 @@
 		181D1C8C57D34820BF39B9E8 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		193F03C4C05D4624BBF3220B /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		211C32475609492DBA35A330 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
-		2A08D70522CB52BF000E50B5 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Pods/GoogleMaps/Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
 		2A08D70722CB5403000E50B5 /* AirGoogleMaps */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AirGoogleMaps; path = "../node_modules/react-native-maps/lib/ios/AirGoogleMaps"; sourceTree = "<group>"; };
 		2A08D70922CB5420000E50B5 /* AirMaps */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AirMaps; path = "../node_modules/react-native-maps/lib/ios/AirMaps"; sourceTree = "<group>"; };
 		2A30A0AB22C347650039D353 /* notification.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = notification.mp3; path = ../android/app/src/main/res/raw/notification.mp3; sourceTree = "<group>"; };
@@ -478,7 +475,6 @@
 		B5C0293A043D4DF0A9C6908C /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		B84B947A2C66441FB4DA192C /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		C0C3668B86654ABF89CE3147 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/native-base/Fonts/Feather.ttf"; sourceTree = "<group>"; };
-		C710B8BA5E24455C972E4254 /* libRNFS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFS.a; sourceTree = "<group>"; };
 		D1CB28D664DF4F10AB68C23F /* RNSound.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSound.xcodeproj; path = "../node_modules/react-native-sound/RNSound.xcodeproj"; sourceTree = "<group>"; };
 		D97CBC3683F5430A8FFD5090 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		E36E430CC7D24C4190D4A810 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
@@ -515,11 +511,9 @@
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
-				2A08D70622CB52BF000E50B5 /* GoogleMaps.framework in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				442049F11513452BAC478B5E /* libRNFS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,7 +672,6 @@
 		2A2405A722C0CF8B003FE0E8 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				C710B8BA5E24455C972E4254 /* libRNFS.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -764,7 +757,6 @@
 			isa = PBXGroup;
 			children = (
 				2AEA129F22CB569D00256AAD /* AirGoogleMaps */,
-				2A08D70522CB52BF000E50B5 /* GoogleMaps.framework */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -1632,12 +1624,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = AC4HZW95GR;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"${PODS_ROOT}/GoogleMaps/Base/Frameworks\"",
-					"\"${PODS_ROOT}/GoogleMaps/Maps/Frameworks\"",
-					"$(PROJECT_DIR)/Pods/GoogleMaps/Maps/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
@@ -1650,10 +1637,8 @@
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 					"$(SRCROOT)..",
 					ode_modules,
-					"eact-native-background-fetchiosRNBackgroundFetch/**",
 					"$(SRCROOT)..",
 					ode_modules,
-					"eact-native-background-timerios",
 					"$(SRCROOT)..",
 					ode_modules,
 					"eact-native-soundRNSound",
@@ -1679,12 +1664,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AC4HZW95GR;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"${PODS_ROOT}/GoogleMaps/Base/Frameworks\"",
-					"\"${PODS_ROOT}/GoogleMaps/Maps/Frameworks\"",
-					"$(PROJECT_DIR)/Pods/GoogleMaps/Maps/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
@@ -1697,10 +1677,8 @@
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 					"$(SRCROOT)..",
 					ode_modules,
-					"eact-native-background-fetchiosRNBackgroundFetch/**",
 					"$(SRCROOT)..",
 					ode_modules,
-					"eact-native-background-timerios",
 					"$(SRCROOT)..",
 					ode_modules,
 					"eact-native-soundRNSound",
