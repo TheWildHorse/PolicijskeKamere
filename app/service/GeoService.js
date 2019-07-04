@@ -2,7 +2,7 @@ import react from "react";
 import { ToastAndroid } from "react-native";
 import { orderByDistance, findNearest, getDistance } from "geolib";
 import BackgroundTimer from "react-native-background-timer";
-import Geolocation from '@react-native-community/geolocation';
+import Geolocation from "@react-native-community/geolocation";
 var Sound = require("react-native-sound");
 
 /**
@@ -16,10 +16,10 @@ Sound.setCategory("Playback");
 
 let _cameras = null;
 let _navigatorWatch = null;
-let oldCameraDistance = 0;
 let _notification = null;
 let _volume = null;
-
+let _oldCameraDistance = 10000;
+let _nearestCameras = null;
 class GeoService {
 	constructor(props) {
 		_cameras = props.cameras;
@@ -29,7 +29,7 @@ class GeoService {
 
 	getCurrentPosition = async () => {
 		return new Promise(resolve => {
-			Geolocation.watchPosition(
+			Geolocation.getCurrentPosition(
 				position => {
 					long = position.coords.longitude;
 					lat = position.coords.latitude;
@@ -47,6 +47,7 @@ class GeoService {
 	};
 
 	startWatching = async nearestCameras => {
+		_nearestCameras = nearestCameras;
 		return new Promise(resolve => {
 			let options = {
 				timeout: 10000,
@@ -63,7 +64,7 @@ class GeoService {
 						longitude: lng //"16.2" lng
 					};
 
-					this.findNearestCamera(userLocation, nearestCameras);
+					this.findNearestCamera(userLocation, _nearestCameras);
 				},
 				error => console.log(error.message),
 				options
@@ -74,8 +75,7 @@ class GeoService {
 	findNearestCamera = (userLocation, nearestCameras) => {
 		let nearest = findNearest(userLocation, nearestCameras);
 		let cameraDistance = getDistance(userLocation, nearest);
-		let oldCameraDistance = 1000;
-		if (cameraDistance < 500 && (cameraDistance < oldCameraDistance) ) {
+		if (cameraDistance <= 500 && cameraDistance < _oldCameraDistance) {
 			let speed = nearest.speed;
 			this.playNotification();
 			if (speed !== "null") {
@@ -93,7 +93,9 @@ class GeoService {
 				);
 			}
 
-			oldCameraDistance = cameraDistance;
+			_oldCameraDistance = cameraDistance;
+		} else if (cameraDistance > _oldCameraDistance) {
+			this.initializeTask();
 		}
 	};
 
@@ -124,31 +126,30 @@ class GeoService {
 	sortCameras = async () => {
 		Geolocation.clearWatch(_navigatorWatch);
 		let positionData = await this.getCurrentPosition();
-		alert("speed: " . positionData.speed);
-		if (positionData.speed > 30) {
-			// check
-			let orderedCamers = orderByDistance(
-				positionData.userLocation,
-				_cameras
-			);
-			let nearestCameras = orderedCamers;
-			if (orderedCamers.length > 50) {
-				nearestCameras = orderedCamers.slice(0, 50);
-			}
-			let cameraDistance = getDistance(
-				positionData.userLocation,
-				nearestCameras[0]
-			);
-			if (cameraDistance < 7000) {
-				this.startWatching(nearestCameras);
-			}
+
+		let orderedCamers = orderByDistance(
+			positionData.userLocation,
+			_cameras
+		);
+		let nearestCameras = orderedCamers;
+		if (orderedCamers.length > 50) {
+			nearestCameras = orderedCamers.slice(0, 50);
+		}
+		let cameraDistance = getDistance(
+			positionData.userLocation,
+			nearestCameras[0]
+		);
+		if (cameraDistance < 7000) {
+			BackgroundTimer.stopBackgroundTimer();
+			_oldCameraDistance = 10000;
+			this.startWatching(nearestCameras);
 		}
 	};
 
 	initializeTask = () => {
 		BackgroundTimer.runBackgroundTimer(() => {
 			this.sortCameras();
-		}, 2 * 60 * 1000); //*60
+		}, 2 * 1000); //*60
 	};
 
 	stopTask = () => {
