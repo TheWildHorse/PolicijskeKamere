@@ -20,6 +20,7 @@ let _notification = null;
 let _volume = null;
 let _oldCameraDistance = 10000;
 let _nearestCameras = null;
+
 class GeoService {
 	constructor(props) {
 		_cameras = props.cameras;
@@ -149,7 +150,7 @@ class GeoService {
 	initializeTask = () => {
 		BackgroundTimer.runBackgroundTimer(() => {
 			this.sortCameras();
-		}, 2 * 1000); //*60
+		}, 2 * 60 * 1000);
 	};
 
 	stopTask = () => {
