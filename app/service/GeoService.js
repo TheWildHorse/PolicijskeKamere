@@ -16,10 +16,11 @@ Sound.setCategory("Playback");
 
 let _cameras = null;
 let _navigatorWatch = null;
-let _notification = null;
+let _notificationSound = null;
 let _volume = null;
 let _oldCameraDistance = 10000;
 let _nearestCameras = null;
+
 class GeoService {
 	constructor(props) {
 		_cameras = props.cameras;
@@ -77,7 +78,7 @@ class GeoService {
 		let cameraDistance = getDistance(userLocation, nearest);
 		if (cameraDistance <= 500 && cameraDistance < _oldCameraDistance) {
 			let speed = nearest.speed;
-			this.playNotification();
+			_notificationSound.play();
 			if (speed !== "null") {
 				ToastAndroid.show(
 					"Kamera za " +
@@ -99,8 +100,8 @@ class GeoService {
 		}
 	};
 
-	playNotification = () => {
-		var notification = new Sound(
+	loadNotification = () => {
+		_notificationSound = new Sound(
 			_notification + ".mp3",
 			Sound.MAIN_BUNDLE,
 			error => {
@@ -111,16 +112,15 @@ class GeoService {
 					// loaded successfully
 					console.log(
 						"duration in seconds: " +
-							notification.getDuration() +
+							_notificationSound.getDuration() +
 							" number of channels: " +
-							notification.getNumberOfChannels()
+							_notificationSound.getNumberOfChannels()
 					);
-					let volume = _volume / 100;
-					notification.setVolume(volume);
-					notification.play();
 				}
 			}
 		);
+		// let volume = (_volume / 100).toFixed(1);
+		// _notificationSound.setVolume(volume);
 	};
 
 	sortCameras = async () => {
@@ -147,9 +147,11 @@ class GeoService {
 	};
 
 	initializeTask = () => {
+		this.loadNotification();
+		this.sortCameras();
 		BackgroundTimer.runBackgroundTimer(() => {
 			this.sortCameras();
-		}, 2 * 1000); //*60
+		}, 2 * 60 * 1000);
 	};
 
 	stopTask = () => {

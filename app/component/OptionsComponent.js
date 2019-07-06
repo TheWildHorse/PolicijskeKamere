@@ -19,13 +19,13 @@ const OptionsComponent = props => {
             onBackdropPress={() => props.props.handleOptions()}
         >
             <Container style={styles.container}>
-                <Text h4>Glasnoća zvuka</Text>
+                {/* <Text h4>Glasnoća zvuka</Text>
                 <Slider
                     value={props.props.volume}
                     onValueChange={value => props.props.handleVolume(value)}
                     minimumValue={0}
                     maximumValue={100}
-                />
+                /> */}
                 <Text h4>Obavijest</Text>
                 <Picker
                     note
